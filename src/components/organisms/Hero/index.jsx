@@ -21,8 +21,7 @@ export const Hero = () => {
           <Button>Empezar Ahora</Button>
           <div className="flex items-center justify-center relative p-4">
             <div className="absolute w-[50px] h-[50px] bg-white rounded-full animate-ping" />
-            <div className="absolute w-[70px] h-[70px] bg-white/30 rounded-full" />
-            <div className="z-10 flex items-center justify-center p-2 bg-[#5f28d3] rounded-full">
+            <div className="z-10 flex items-center justify-center w-[50px] h-[50px] bg-[#5f28d3] rounded-full">
               <PlayIcon />
             </div>
           </div>
