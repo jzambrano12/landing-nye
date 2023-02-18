@@ -1,9 +1,10 @@
 import { PlayIcon } from "../../../assets/icons/play";
 import { Button } from "../../atoms/Button";
+import { SocialIconsFloating } from "../../molecules/SocialIconsFloating";
 
 export const Hero = () => {
   return (
-    <section className="w-screen h-screen bg-[#f3effe] pt-24 px-4">
+    <section className="w-screen min-h-screen bg-[#f3effe] pt-24 pb-10 px-4">
       <div>
         <div>
           <h1 className="font-black text-[35px] leading-[45px] text-center">
@@ -28,7 +29,10 @@ export const Hero = () => {
           <span className="font-bold text-sm">¿Cómo funciona?</span>
         </div>
       </div>
-      <div></div>
+      <div className="relative flex justify-center mt-6">
+        <img src="/images/hero.webp" alt="Hero img" />
+        <SocialIconsFloating />
+      </div>
     </section>
   );
 };
