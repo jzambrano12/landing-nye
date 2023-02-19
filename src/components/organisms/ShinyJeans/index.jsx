@@ -13,7 +13,7 @@ export const ShinyJeans = () => {
   return (
     <section className="py-[30px]">
       <div>
-        <h2 className="text-[35px] font-black leading-[45px] text-center">
+        <h2 className="text-[35px] font-black leading-[40px] text-center">
           Conoce nuestros <br />{" "}
           <span className="text-[#fd346e]">Shiny Jeans</span>
         </h2>
@@ -26,7 +26,7 @@ export const ShinyJeans = () => {
         <Swiper
           speed={5000}
           spaceBetween={10}
-          slidesPerView={3}
+          slidesPerView={2}
           loop={true}
           modules={[Autoplay]}
           autoplay={{
@@ -34,28 +34,28 @@ export const ShinyJeans = () => {
             disableOnInteraction: false,
           }}
         >
-          <SwiperSlide>
+          <SwiperSlide className="flex flex-col text-center">
             <Product />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex flex-col text-center">
             <Product />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex flex-col text-center">
             <Product />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex flex-col text-center">
             <Product />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex flex-col text-center">
             <Product />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="flex flex-col text-center">
             <Product />
           </SwiperSlide>
         </Swiper>
       </div>
       <div className="text-center">
-        <Button>Empezar ahora</Button>
+        <Button size="MD">Empezar ahora</Button>
       </div>
     </section>
   );

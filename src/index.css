@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   width: 100vw;
   min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 #root {
@@ -14,6 +16,37 @@ body {
   height: 100%;
 }
 
+/* Swiper */
 .swiper-wrapper {
   transition-timing-function: linear;
+}
+
+.swiper-button-next {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-image: url(/icons/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  background-color: #6236ff;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-prev {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-image: url(/icons/arrow-left.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  background-color: #6236ff;
+}
+
+.swiper-button-prev::after {
+  display: none;
 }

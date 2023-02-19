@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         pink: "#fd346e",
         purple: "#5f28d3",
+        lila: "#f3effe",
       },
       // keyframes: {
       //   wiggle: {

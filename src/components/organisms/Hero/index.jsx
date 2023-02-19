@@ -23,7 +23,7 @@ export const Hero = () => {
           <div className="flex items-center justify-center relative p-4">
             <div className="absolute w-[50px] h-[50px] bg-white rounded-full animate-ping" />
             <div className="z-10 flex items-center justify-center w-[50px] h-[50px] bg-[#5f28d3] rounded-full">
-              <PlayIcon />
+              <PlayIcon className="w-6 h-6" />
             </div>
           </div>
           <span className="font-bold text-sm">¿Cómo funciona?</span>
