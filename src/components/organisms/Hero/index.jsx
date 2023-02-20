@@ -7,7 +7,7 @@ export const Hero = () => {
     <section className="w-screen min-h-screen bg-[#f3effe] pt-24 pb-10 px-4">
       <div>
         <div>
-          <h1 className="font-black text-[35px] leading-[45px] text-center">
+          <h1 className="font-black text-[35px] leading-[42px] text-center">
             ¡Los Mejores Jeans <br /> Colombianos <br />
             Para Ti!
           </h1>
