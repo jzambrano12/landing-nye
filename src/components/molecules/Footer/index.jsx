@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="py-[30px] px-4 bg-black">
+    <footer className="py-[30px] px-4 bg-black xl:px-32">
       <div>
         <ul className="text-sm flex flex-wrap items-center justify-center">
           <li className="text-white">Iniciar sesión</li>
@@ -8,6 +8,7 @@ export const Footer = () => {
           <li className="text-white">Registrarme</li>
           <div className="w-[1px] h-4 bg-white mx-2" />
           <li className="text-white">Preguntas frecuentes</li>
+          <div className="w-[1px] h-4 bg-white mx-2 hidden md:block" />
           <li className="text-white">Terminos y condiciones</li>
         </ul>
       </div>

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button } from "../../atoms/Button";
 
+const itemListStyles =
+  "font-bold transition-all hover:text-pink cursor-pointer md:text-xs lg:text-lg";
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -26,9 +29,9 @@ export const Navbar = () => {
     <nav
       className={`transition-all fixed top-0 bg-[#f3effe]/70 p-4 flex w-full items-center justify-between z-20 ${
         scrollPosition >= 8 && "backdrop-blur-lg"
-      }`}
+      }  xl:px-32`}
     >
-      <div className="flex flex-1">
+      <div className="flex flex-1 md:hidden">
         <button
           onClick={handleOpen}
           className={`flex flex-col items-center justify-between p-2 w-10 rounded-md transition-all ${
@@ -57,6 +60,16 @@ export const Navbar = () => {
           />
         </button>
       </div>
+      <div className="hidden md:flex md:flex-1">
+        <ul className="flex gap-4">
+          <li className={itemListStyles}>Colección</li>
+          <li className={itemListStyles}>Beneficios</li>
+          <li className={itemListStyles}>Blogs</li>
+          <li className={itemListStyles}>Testimonios</li>
+          <li className={itemListStyles}>Precios</li>
+          <li className={itemListStyles}>Nuestra tienda</li>
+        </ul>
+      </div>
 
       <div className="flex gap-2">
         <Button variant="SECONDARY">Empezar Ahora</Button>
@@ -67,7 +80,7 @@ export const Navbar = () => {
       <div
         className={`fixed p-4 top-16 left-0 bg-white w-full shadow-2xl transition-all ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        } md:hidden`}
       >
         <span className="font-bold">CONFIGURACIONES</span>
         <ul className="mt-4 flex flex-col gap-3">

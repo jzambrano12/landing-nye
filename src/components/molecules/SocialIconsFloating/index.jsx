@@ -1,6 +1,6 @@
 export const SocialIconsFloating = () => {
   return (
-    <div className="absolute flex top-0 left-0 w-full h-full">
+    <div className="absolute flex top-0 left-0 w-full h-full md:hidden">
       {/* Left icons */}
       <div className="absolute top-0 left-20">🤯</div>
       <div className="absolute top-2 left-4">⚡️</div>

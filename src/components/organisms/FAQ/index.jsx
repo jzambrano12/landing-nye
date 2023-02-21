@@ -6,7 +6,7 @@ export const FAQ = () => {
   const [indexOpened, setIndexOpened] = useState(null);
 
   return (
-    <section className="py-[30px] px-4">
+    <section className="py-[30px] px-4  xl:px-32">
       <div>
         <h2 className="text-[35px] font-black leading-[40px] text-center">
           Conoce nuestros <br />{" "}

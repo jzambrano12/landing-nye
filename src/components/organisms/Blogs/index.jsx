@@ -2,7 +2,7 @@ import { Button } from "../../atoms/Button";
 
 export const Blogs = () => {
   return (
-    <section className="py-[30px] px-4 bg-[#f5f5f5]">
+    <section className="py-[30px] px-4 bg-[#f5f5f5]  xl:px-32">
       <div>
         <h2 className="text-[35px] font-black leading-[40px] text-center">
           Conoce nuestros <br />{" "}
