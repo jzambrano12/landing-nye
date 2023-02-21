@@ -2,7 +2,7 @@ import CountUp from "react-countup";
 
 export const Numbers = () => {
   return (
-    <section className="flex flex-col bg-black py-8 gap-8">
+    <section className="flex flex-col bg-black py-8 gap-8 lg:flex-row lg:justify-center lg:gap-20">
       <div className="flex flex-col items-center">
         <span className="font-bold text-5xl text-white">
           <CountUp end={35} />+

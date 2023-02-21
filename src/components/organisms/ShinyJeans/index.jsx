@@ -10,9 +10,13 @@ import Lightbox from "yet-another-react-lightbox";
 
 import "swiper/css";
 import "yet-another-react-lightbox/styles.css";
+import { useWindowSize } from "../../../hooks/useWindowSize";
+import { Title } from "../../atoms/Title";
 
 export const ShinyJeans = () => {
   const [index, setIndex] = useState(-1);
+  const { width } = useWindowSize();
+  const isDesktop = width >= 1024;
 
   const slides = [
     "/images/shiny-1.webp",
@@ -29,22 +33,18 @@ export const ShinyJeans = () => {
   };
 
   return (
-    <section className="py-[30px]">
-      <div>
-        <h2 className="text-[35px] font-black leading-[40px] text-center">
-          Conoce nuestros <br />{" "}
-          <span className="text-[#fd346e]">Shiny Jeans</span>
-        </h2>
-        <p className="text-[#70798b] text-sm text-center mt-2">
-          When, while lovely valley teems with vapour around meand meridian sun
-          strikes the upper impe
-        </p>
-      </div>
+    <section className="py-[30px] lg:py-24">
+      <Title
+        firstText="Conoce nuestros"
+        secondText="Shiny Jeans"
+        description="When, while lovely valley teems with vapour around meand meridian sun
+        strikes the upper impe"
+      />
       <div className="w-screen flex flex-nowrap my-8 overflow-x-auto">
         <Swiper
           speed={5000}
-          spaceBetween={10}
-          slidesPerView={2}
+          spaceBetween={!isDesktop ? 10 : 50}
+          slidesPerView={!isDesktop ? 2 : 4}
           loop={true}
           modules={[Autoplay]}
           autoplay={{
@@ -66,7 +66,7 @@ export const ShinyJeans = () => {
         />
       </div>
       <div className="text-center">
-        <Button size="MD">Empezar ahora</Button>
+        <Button size={isDesktop ? "LG" : "MD"}>Empezar ahora</Button>
       </div>
     </section>
   );
