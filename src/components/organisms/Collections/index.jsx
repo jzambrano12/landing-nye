@@ -1,16 +1,34 @@
 /* eslint-disable import/no-unresolved */
+import { useState } from "react";
 import { Button } from "../../atoms/Button";
 
 import { EffectFlip, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Lightbox from "yet-another-react-lightbox";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-flip";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "yet-another-react-lightbox/styles.css";
 
 export const Collections = () => {
+  const [index, setIndex] = useState(-1);
+
+  const slides = [
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+  ];
+
+  const handleOpen = (incomingIndex) => {
+    setIndex(incomingIndex);
+  };
+
   return (
     <section className="bg-lila py-[30px] px-4">
       <div>
@@ -32,42 +50,24 @@ export const Collections = () => {
           modules={[EffectFlip, Navigation]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <img
-              src="/images/shiny-1.webp"
-              className="w-full rounded-xl"
-              alt="Collection #1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/images/shiny-1.webp"
-              className="w-full rounded-xl"
-              alt="Collection #1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/images/shiny-1.webp"
-              className="w-full rounded-xl"
-              alt="Collection #1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/images/shiny-1.webp"
-              className="w-full rounded-xl"
-              alt="Collection #1"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src="/images/shiny-1.webp"
-              className="w-full rounded-xl"
-              alt="Collection #1"
-            />
-          </SwiperSlide>
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <button onClick={() => handleOpen(index)} className="w-full">
+                <img
+                  src={slide}
+                  className="w-full rounded-xl"
+                  alt="Collection #1"
+                />
+              </button>
+            </SwiperSlide>
+          ))}
         </Swiper>
+        <Lightbox
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          slides={slides}
+        />
       </div>
       <div className="text-center mt-6">
         <Button size="MD">Empezar Ahora</Button>

@@ -1,15 +1,33 @@
+/* eslint-disable import/no-unresolved */
+import { useState } from "react";
 import { Button } from "../../atoms/Button";
 import { Product } from "./product";
 
 // Import Swiper React components
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Lightbox from "yet-another-react-lightbox";
 
-// Import Swiper styles
-// eslint-disable-next-line import/no-unresolved
 import "swiper/css";
+import "yet-another-react-lightbox/styles.css";
 
 export const ShinyJeans = () => {
+  const [index, setIndex] = useState(-1);
+
+  const slides = [
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+    "/images/shiny-1.webp",
+  ];
+
+  const handleOpen = (incomingIndex) => {
+    setIndex(incomingIndex);
+  };
+
   return (
     <section className="py-[30px]">
       <div>
@@ -34,25 +52,18 @@ export const ShinyJeans = () => {
             disableOnInteraction: false,
           }}
         >
-          <SwiperSlide className="flex flex-col text-center">
-            <Product />
-          </SwiperSlide>
-          <SwiperSlide className="flex flex-col text-center">
-            <Product />
-          </SwiperSlide>
-          <SwiperSlide className="flex flex-col text-center">
-            <Product />
-          </SwiperSlide>
-          <SwiperSlide className="flex flex-col text-center">
-            <Product />
-          </SwiperSlide>
-          <SwiperSlide className="flex flex-col text-center">
-            <Product />
-          </SwiperSlide>
-          <SwiperSlide className="flex flex-col text-center">
-            <Product />
-          </SwiperSlide>
+          {slides.map((slide, index) => (
+            <SwiperSlide className="flex flex-col text-center" key={index}>
+              <Product src={slide} handleOpen={() => handleOpen(index)} />
+            </SwiperSlide>
+          ))}
         </Swiper>
+        <Lightbox
+          open={index >= 0}
+          index={index}
+          close={() => setIndex(-1)}
+          slides={slides}
+        />
       </div>
       <div className="text-center">
         <Button size="MD">Empezar ahora</Button>
