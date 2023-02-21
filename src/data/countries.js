@@ -1,0 +1,478 @@
+export const countries = [
+  { name: "Colombia", value: "+57", flag: "🇨🇴" },
+  { name: "Afghanistan", value: "+93", flag: "🇦🇫" },
+  { name: "Åland Islands", value: "+358", flag: "🇦🇽" },
+  { name: "Albania", value: "+355", flag: "🇦🇱" },
+  { name: "Algeria", value: "+213", flag: "🇩🇿" },
+  {
+    name: "American Samoa",
+    value: "+1684",
+
+    flag: "🇺🇸",
+  },
+  { name: "Andorra", value: "+376", flag: "🇦🇩" },
+  { name: "Angola", value: "+244", flag: "🇦🇴" },
+  { name: "Anguilla", value: "+1264", flag: "🇦🇮" },
+  { name: "Antarctica", value: "+672", flag: "🇦🇶" },
+  {
+    name: "Antigua and Barbuda",
+    value: "+1268",
+
+    flag: "🇦🇬",
+  },
+  { name: "Argentina", value: "+54", flag: "🇦🇷" },
+  { name: "Armenia", value: "+374", flag: "🇦🇲" },
+  { name: "Aruba", value: "+297", flag: "🇦🇼" },
+  { name: "Australia", value: "+61", flag: "🇦🇺" },
+  { name: "Austria", value: "+43", flag: "🇦🇹" },
+  { name: "Azerbaijan", value: "+994", flag: "🇦🇿" },
+  { name: "Bahamas", value: "+1242", flag: "🇧🇸" },
+  { name: "Bahrain", value: "+973", flag: "🇧🇸" },
+  { name: "Bangladesh", value: "+880", flag: "🇧🇩" },
+  { name: "Barbados", value: "+1246", flag: "🇧🇧" },
+  { name: "Belarus", value: "+375", flag: "🇧🇾" },
+  { name: "Belgium", value: "+32", flag: "🇧🇪" },
+  { name: "Belize", value: "+501", flag: "🇧🇿" },
+  { name: "Benin", value: "+229", flag: "🇧🇯" },
+  { name: "Bermuda", value: "+1441", flag: "🇧🇲" },
+  { name: "Bhutan", value: "+975", flag: "🇧🇹" },
+  {
+    name: "Bolivia, Plurinational State of bolivia",
+    value: "+591",
+
+    flag: "🇧🇴",
+  },
+  {
+    name: "Bosnia and Herzegovina",
+    value: "+387",
+
+    flag: "🇧🇦",
+  },
+  { name: "Botswana", value: "+267", flag: "🇧🇼" },
+  { name: "Bouvet Island", value: "+47", flag: "🏳" },
+  { name: "Brazil", value: "+55", flag: "🇧🇷" },
+  {
+    name: "British Indian Ocean Territory",
+    value: "+246",
+
+    flag: "🇮🇴",
+  },
+  {
+    name: "Brunei Darussalam",
+    value: "+673",
+
+    flag: "🇧🇳",
+  },
+  { name: "Bulgaria", value: "+359", flag: "🇧🇬" },
+  { name: "Burkina Faso", value: "+226", flag: "🇧🇫" },
+  { name: "Burundi", value: "+257", flag: "🇧🇮" },
+  { name: "Cambodia", value: "+855", flag: "🇰🇭" },
+  { name: "Cameroon", value: "+237", flag: "🇨🇲" },
+  { name: "Canada", value: "+1", flag: "🇨🇦" },
+  { name: "Cape Verde", value: "+238", flag: "🇨🇻" },
+  {
+    name: "Cayman Islands",
+    value: "+ 345",
+
+    flag: "🇰🇾",
+  },
+  {
+    name: "Central African Republic",
+    value: "+236",
+
+    flag: "🇨🇫",
+  },
+  { name: "Chad", value: "+235", flag: "🇹🇩" },
+  { name: "Chile", value: "+56", flag: "🇨🇱" },
+  { name: "China", value: "+86", flag: "🇨🇳" },
+  {
+    name: "Christmas Island",
+    value: "+61",
+
+    flag: "🇨🇽",
+  },
+  {
+    name: "Cocos (Keeling) Islands",
+    value: "+61",
+
+    flag: "🇨🇨",
+  },
+  { name: "Comoros", value: "+269", flag: "🇰🇲" },
+  { name: "Congo", value: "+242", flag: "🇨🇬" },
+  {
+    name: "Congo, The Democratic Republic of the Congo",
+    value: "+243",
+
+    flag: "🇨🇩",
+  },
+  { name: "Cook Islands", value: "+682", flag: "🇨🇰" },
+  { name: "Costa Rica", value: "+506", flag: "🇨🇷" },
+  { name: "Cote d'Ivoire", value: "+225", flag: "🇨🇮" },
+  { name: "Croatia", value: "+385", flag: "🇭🇷" },
+  { name: "Cuba", value: "+53", flag: "🇨🇺" },
+  { name: "Cyprus", value: "+357", flag: "🇨🇾" },
+  { name: "Czech Republic", value: "+420", flag: "🇨🇿" },
+  { name: "Denmark", value: "+45", flag: "🇩🇰" },
+  { name: "Djibouti", value: "+253", flag: "🇩🇯" },
+  { name: "Dominica", value: "+1767", flag: "🇩🇲" },
+  {
+    name: "Dominican Republic",
+    value: "+1849",
+
+    flag: "🇨🇩",
+  },
+  { name: "Ecuador", value: "+593", flag: "🇪🇨" },
+  { name: "Egypt", value: "+20", flag: "🇪🇬" },
+  { name: "El Salvador", value: "+503", flag: "🇸🇻" },
+  {
+    name: "Equatorial Guinea",
+    value: "+240",
+
+    flag: "🇬🇶",
+  },
+  { name: "Eritrea", value: "+291", flag: "🇪🇷" },
+  { name: "Estonia", value: "+372", flag: "🇪🇪" },
+  { name: "Ethiopia", value: "+251", flag: "🇪🇹" },
+  {
+    name: "Falkland Islands (Malvinas)",
+    value: "+500",
+
+    flag: "🇫🇰",
+  },
+  { name: "Faroe Islands", value: "+298", flag: "🇫🇴" },
+  { name: "Fiji", value: "+679", flag: "🇫🇯" },
+  { name: "Finland", value: "+358", flag: "🇫🇮" },
+  { name: "France", value: "+33", flag: "🇫🇷" },
+  { name: "French Guiana", value: "+594", flag: "🇬🇫" },
+  {
+    name: "French Polynesia",
+    value: "+689",
+
+    flag: "🇵🇫",
+  },
+  {
+    name: "French Southern Territories",
+    value: "+262",
+
+    flag: "🇹🇫",
+  },
+  { name: "Gabon", value: "+241", flag: "🇬🇦" },
+  { name: "Gambia", value: "+220", flag: "🇬🇲" },
+  { name: "Georgia", value: "+995", flag: "🇬🇪" },
+  { name: "Germany", value: "+49", flag: "🇩🇪" },
+  { name: "Ghana", value: "+233", flag: "🇬🇭" },
+  { name: "Gibraltar", value: "+350", flag: "🇬🇮" },
+  { name: "Greece", value: "+30", flag: "🇬🇷" },
+  { name: "Greenland", value: "+299", flag: "🇬🇱" },
+  { name: "Grenada", value: "+1473", flag: "🇬🇩" },
+  { name: "Guadeloupe", value: "+590", flag: "🇬🇵" },
+  { name: "Guam", value: "+1671", flag: "🇬🇺" },
+  { name: "Guatemala", value: "+502", flag: "🇬🇹" },
+  { name: "Guernsey", value: "+44", flag: "🇬🇬" },
+  { name: "Guinea", value: "+224", flag: "🇬🇳" },
+  { name: "Guinea-Bissau", value: "+245", flag: "🇬🇼" },
+  { name: "Guyana", value: "+592", flag: "🇬🇾" },
+  { name: "Haiti", value: "+509", flag: "🇭🇹" },
+  {
+    name: "Heard Island and Mcdonald Islands",
+    value: "+0",
+
+    flag: "🏳",
+  },
+  {
+    name: "Holy See (Vatican City State)",
+    value: "+379",
+
+    flag: "🇻🇦",
+  },
+  { name: "Honduras", value: "+504", flag: "🇭🇳" },
+  { name: "Hong Kong", value: "+852", flag: "🇭🇰" },
+  { name: "Hungary", value: "+36", flag: "🇭🇺" },
+  { name: "Iceland", value: "+354", flag: "🇮🇸" },
+  { name: "India", value: "+91", flag: "🇮🇳" },
+  { name: "Indonesia", value: "+62", flag: "🇮🇩" },
+  {
+    name: "Iran, Islamic Republic of Persian Gulf",
+    value: "+98",
+
+    flag: "🇮🇷",
+  },
+  { name: "Iraq", value: "+964", flag: "🇮🇶" },
+  { name: "Ireland", value: "+353", flag: "🇮🇪" },
+  { name: "Isle of Man", value: "+44", flag: "🇮🇲" },
+  { name: "Israel", value: "+972", flag: "🇮🇱" },
+  { name: "Italy", value: "+39", flag: "🇮🇹" },
+  { name: "Jamaica", value: "+1876", flag: "🇯🇲" },
+  { name: "Japan", value: "+81", flag: "🇯🇵" },
+  { name: "Jersey", value: "+44", flag: "🇯🇪" },
+  { name: "Jordan", value: "+962", flag: "🇯🇴" },
+  { name: "Kazakhstan", value: "+7", flag: "🇰🇿" },
+  { name: "Kenya", value: "+254", flag: "🇰🇪" },
+  { name: "Kiribati", value: "+686", flag: "🇰🇮" },
+  {
+    name: "Korea, Democratic People's Republic of Korea",
+    value: "+850",
+
+    flag: "🇰🇵",
+  },
+  {
+    name: "Korea, Republic of South Korea",
+    value: "+82",
+
+    flag: "🇰🇷",
+  },
+  { name: "Kosovo", value: "+383", flag: "🇽🇰" },
+  { name: "Kuwait", value: "+965", flag: "🇰🇼" },
+  { name: "Kyrgyzstan", value: "+996", flag: "🇰🇬" },
+  { name: "Laos", value: "+856", flag: "🇱🇦" },
+  { name: "Latvia", value: "+371", flag: "🇱🇻" },
+  { name: "Lebanon", value: "+961", flag: "🇱🇧" },
+  { name: "Lesotho", value: "+266", flag: "🇱🇸" },
+  { name: "Liberia", value: "+231", flag: "🇱🇷" },
+  {
+    name: "Libyan Arab Jamahiriya",
+    value: "+218",
+
+    flag: "🇱🇾",
+  },
+  { name: "Liechtenstein", value: "+423", flag: "🇱🇮" },
+  { name: "Lithuania", value: "+370", flag: "🇱🇹" },
+  { name: "Luxembourg", value: "+352", flag: "🇱🇺" },
+  { name: "Macao", value: "+853", flag: "🇲🇴" },
+  { name: "Macedonia", value: "+389", flag: "🇲🇰" },
+  { name: "Madagascar", value: "+261", flag: "🇲🇬" },
+  { name: "Malawi", value: "+265", flag: "🇲🇼" },
+  { name: "Malaysia", value: "+60", flag: "🇲🇾" },
+  { name: "Maldives", value: "+960", flag: "🇲🇻" },
+  { name: "Mali", value: "+223", flag: "🇲🇱" },
+  { name: "Malta", value: "+356", flag: "🇲🇹" },
+  {
+    name: "Marshall Islands",
+    value: "+692",
+
+    flag: "🇲🇭",
+  },
+  { name: "Martinique", value: "+596", flag: "🇲🇶" },
+  { name: "Mauritania", value: "+222", flag: "🇲🇷" },
+  { name: "Mauritius", value: "+230", flag: "🇲🇺" },
+  { name: "Mayotte", value: "+262", flag: "🇾🇹" },
+  { name: "Mexico", value: "+52", flag: "🇲🇽" },
+  {
+    name: "Micronesia, Federated States of Micronesia",
+    value: "+691",
+
+    flag: "🇫🇲",
+  },
+  { name: "Moldova", value: "+373", flag: "🇲🇩" },
+  { name: "Monaco", value: "+377", flag: "🇲🇨" },
+  { name: "Mongolia", value: "+976", flag: "🇲🇳" },
+  { name: "Montenegro", value: "+382", flag: "🇲🇪" },
+  { name: "Montserrat", value: "+1664", flag: "🇲🇸" },
+  { name: "Morocco", value: "+212", flag: "🇲🇦" },
+  { name: "Mozambique", value: "+258", flag: "🇲🇿" },
+  { name: "Myanmar", value: "+95", flag: "🇲🇲" },
+  { name: "Namibia", value: "+264", flag: "🇳🇦" },
+  { name: "Nauru", value: "+674", flag: "🇳🇷" },
+  { name: "Nepal", value: "+977", flag: "🇳🇵" },
+  { name: "Netherlands", value: "+31", flag: "🇳🇱" },
+  {
+    name: "Netherlands Antilles",
+    value: "+599",
+
+    flag: "🇳🇱",
+  },
+  { name: "New Caledonia", value: "+687", flag: "🇳🇨" },
+  { name: "New Zealand", value: "+64", flag: "🇳🇿" },
+  { name: "Nicaragua", value: "+505", flag: "🇳🇮" },
+  { name: "Niger", value: "+227", flag: "🇳🇪" },
+  { name: "Nigeria", value: "+234", flag: "🇳🇬" },
+  { name: "Niue", value: "+683", flag: "🇳🇺" },
+  { name: "Norfolk Island", value: "+672", flag: "🇳🇫" },
+  {
+    name: "Northern Mariana Islands",
+    value: "+1670",
+
+    flag: "🏳",
+  },
+  { name: "Norway", value: "+47", flag: "🇳🇴" },
+  { name: "Oman", value: "+968", flag: "🇴🇲" },
+  { name: "Pakistan", value: "+92", flag: "🇵🇰" },
+  { name: "Palau", value: "+680", flag: "🇵🇼" },
+  {
+    name: "Palestinian Territory, Occupied",
+    value: "+970",
+
+    flag: "🇵🇸",
+  },
+  { name: "Panama", value: "+507", flag: "🇵🇦" },
+  {
+    name: "Papua New Guinea",
+    value: "+675",
+
+    flag: "🇵🇬",
+  },
+  { name: "Paraguay", value: "+595", flag: "🇵🇾" },
+  { name: "Peru", value: "+51", flag: "🇵🇪" },
+  { name: "Philippines", value: "+63", flag: "🇵🇭" },
+  { name: "Pitcairn", value: "+64", flag: "🇵🇳" },
+  { name: "Poland", value: "+48", flag: "🇵🇱" },
+  { name: "Portugal", value: "+351", flag: "🇵🇹" },
+  { name: "Puerto Rico", value: "+1939", flag: "🇵🇷" },
+  { name: "Qatar", value: "+974", flag: "🇶🇦" },
+  { name: "Romania", value: "+40", flag: "🇷🇴" },
+  { name: "Russia", value: "+7", flag: "🇷🇺" },
+  { name: "Rwanda", value: "+250", flag: "🇷🇼" },
+  { name: "Reunion", value: "+262", flag: "🇫🇷" },
+  {
+    name: "Saint Barthelemy",
+    value: "+590",
+
+    flag: "🇧🇱",
+  },
+  {
+    name: "Saint Helena, Ascension and Tristan Da Cunha",
+    value: "+290",
+
+    flag: "🇸🇭",
+  },
+  {
+    name: "Saint Kitts and Nevis",
+    value: "+1869",
+
+    flag: "🇰🇳",
+  },
+  { name: "Saint Lucia", value: "+1758", flag: "🇱🇨" },
+  { name: "Saint Martin", value: "+590", flag: "🏳" },
+  {
+    name: "Saint Pierre and Miquelon",
+    value: "+508",
+
+    flag: "🇵🇲",
+  },
+  {
+    name: "Saint Vincent and the Grenadines",
+    value: "+1784",
+
+    flag: "🇻🇨",
+  },
+  { name: "Samoa", value: "+685", flag: "🇼🇸" },
+  { name: "San Marino", value: "+378", flag: "🇸🇲" },
+  {
+    name: "Sao Tome and Principe",
+    value: "+239",
+
+    flag: "🇸🇹",
+  },
+  { name: "Saudi Arabia", value: "+966", flag: "🇸🇦" },
+  { name: "Senegal", value: "+221", flag: "🇸🇳" },
+  { name: "Serbia", value: "+381", flag: "🇷🇸" },
+  { name: "Seychelles", value: "+248", flag: "🇸🇨" },
+  { name: "Sierra Leone", value: "+232", flag: "🇸🇱" },
+  { name: "Singapore", value: "+65", flag: "🇸🇬" },
+  { name: "Slovakia", value: "+421", flag: "🇸🇰" },
+  { name: "Slovenia", value: "+386", flag: "🇸🇮" },
+  {
+    name: "Solomon Islands",
+    value: "+677",
+
+    flag: "🇸🇧",
+  },
+  { name: "Somalia", value: "+252", flag: "🇸🇴" },
+  { name: "South Africa", value: "+27", flag: "🇿🇦" },
+  { name: "South Sudan", value: "+211", flag: "🇸🇸" },
+  {
+    name: "South Georgia and the South Sandwich Islands",
+    value: "+500",
+
+    flag: "🇬🇸",
+  },
+  { name: "Spain", value: "+34", flag: "🇪🇸" },
+  { name: "Sri Lanka", value: "+94", flag: "🇱🇰" },
+  { name: "Sudan", value: "+249", flag: "🇸🇩" },
+  { name: "Suriname", value: "+597", flag: "🇸🇷" },
+  {
+    name: "Svalbard and Jan Mayen",
+    value: "+47",
+
+    flag: "🇩🇰",
+  },
+  { name: "Swaziland", value: "+268", flag: "🇸🇿" },
+  { name: "Sweden", value: "+46", flag: "🇸🇪" },
+  { name: "Switzerland", value: "+41", flag: "🇨🇭" },
+  {
+    name: "Syrian Arab Republic",
+    value: "+963",
+
+    flag: "🇸🇾",
+  },
+  { name: "Taiwan", value: "+886", flag: "🇹🇼" },
+  { name: "Tajikistan", value: "+992", flag: "🇹🇯" },
+  {
+    name: "Tanzania, United Republic of Tanzania",
+    value: "+255",
+
+    flag: "🇹🇿",
+  },
+  { name: "Thailand", value: "+66", flag: "🇹🇭" },
+  { name: "Timor-Leste", value: "+670", flag: "🇹🇱" },
+  { name: "Togo", value: "+228", flag: "🇹🇬" },
+  { name: "Tokelau", value: "+690", flag: "🇹🇰" },
+  { name: "Tonga", value: "+676", flag: "🇹🇴" },
+  {
+    name: "Trinidad and Tobago",
+    value: "+1868",
+
+    flag: "🇹🇹",
+  },
+  { name: "Tunisia", value: "+216", flag: "🇹🇳" },
+  { name: "Turkey", value: "+90", flag: "🇹🇷" },
+  { name: "Turkmenistan", value: "+993", flag: "🇹🇲" },
+  {
+    name: "Turks and Caicos Islands",
+    value: "+1649",
+
+    flag: "🇹🇨",
+  },
+  { name: "Tuvalu", value: "+688", flag: "🇹🇻" },
+  { name: "Uganda", value: "+256", flag: "🇺🇬" },
+  { name: "Ukraine", value: "+380", flag: "🇺🇦" },
+  {
+    name: "United Arab Emirates",
+    value: "+971",
+
+    flag: "🇦🇪",
+  },
+  { name: "United Kingdom", value: "+44", flag: "🇬🇧" },
+  { name: "United States", value: "+1", flag: "🇺🇸" },
+  { name: "Uruguay", value: "+598", flag: "🇺🇾" },
+  { name: "Uzbekistan", value: "+998", flag: "🇺🇿" },
+  { name: "Vanuatu", value: "+678", flag: "🇻🇺" },
+  {
+    name: "Venezuela, Bolivarian Republic of Venezuela",
+    value: "+58",
+
+    flag: "🇻🇪",
+  },
+  { name: "Vietnam", value: "+84", flag: "🇻🇳" },
+  {
+    name: "Virgin Islands, British",
+    value: "+1284",
+
+    flag: "🇻🇬",
+  },
+  {
+    name: "Virgin Islands, U.S.",
+    value: "+1340",
+
+    flag: "🇻🇮",
+  },
+  {
+    name: "Wallis and Futuna",
+    value: "+681",
+
+    flag: "🇼🇫",
+  },
+  { name: "Yemen", value: "+967", flag: "🇾🇪" },
+  { name: "Zambia", value: "+260", flag: "🇿🇲" },
+  { name: "Zimbabwe", value: "+263", flag: "🇿🇼" },
+];

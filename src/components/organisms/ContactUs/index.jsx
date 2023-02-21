@@ -1,6 +1,24 @@
+import { useRef, useState } from "react";
 import { PlayIcon } from "../../../assets/icons/play";
+import { countries } from "../../../data/countries";
+import { useOnClickOutside } from "../../../hooks/useOnClickOutside";
 
 export const ContactUs = () => {
+  const listRef = useRef();
+  const [showList, setShowList] = useState(false);
+  const [countrySelected, setCountrySelected] = useState(countries[0]);
+
+  useOnClickOutside(listRef, () => setShowList(false));
+
+  const handleShowList = () => {
+    setShowList((prevState) => !prevState);
+  };
+
+  const handleSelect = (country) => {
+    setCountrySelected(country);
+    handleShowList();
+  };
+
   return (
     <section className="bg-[#fff5f8] py-[30px] px-4">
       <div>
@@ -42,26 +60,48 @@ export const ContactUs = () => {
               className="h-[35px] bg-[#f5f8fa] font-light text-[#6c6c6c] text-sm rounded-full px-4 outline-none placeholder:text-[#6c6c6c]/30"
             />
           </div>
-          <div className="flex flex-col mt-4">
+          <div className="relative flex flex-col mt-4">
             <label htmlFor="email" className="font-bold text-xs mb-1">
               Teléfono
             </label>
-            <div className="relative w-full">
-              <div className="absolute top-2 left-4 flex items-center gap-2">
-                <div className="w-[23px] h-4">
-                  <div className="h-1/3 bg-[#ffdd04]" />
-                  <div className="h-1/3 bg-[#034ea2]" />
-                  <div className="h-1/3 bg-red-600" />
-                </div>
-                <span className="text-[#5a5a5a] font-medium text-sm">+57</span>
-              </div>
+            <div className="flex items-center relative w-full h-[35px] bg-[#f5f8fa] rounded-full px-4">
+              <button
+                type="button"
+                onClick={handleShowList}
+                className="top-[6px] left-4 flex items-center gap-2"
+              >
+                <div className="">{countrySelected.flag}</div>
+                <span className="text-[#5a5a5a] font-medium text-sm">
+                  {countrySelected.value}
+                </span>
+              </button>
               <input
                 id="email"
                 type="phone"
                 placeholder="111 111 1111"
-                className="w-full h-[35px] bg-[#f5f8fa] font-light text-[#6c6c6c] text-sm rounded-full pl-[5.2rem] pr-4 outline-none placeholder:text-[#6c6c6c]/30"
+                className="flex flex-1 w-full bg-transparent font-light text-[#6c6c6c] text-sm pl-1 pr-4 outline-none placeholder:text-[#6c6c6c]/30"
               />
             </div>
+            {showList && (
+              <div
+                ref={listRef}
+                className="flex flex-col gap-2 absolute w-full top-16 max-h-52 overflow-auto left-0 bg-black/95 shadow-2xl shadow-pink/30 p-4 rounded-lg"
+              >
+                {countries.map((country, index) => (
+                  <button
+                    type="button"
+                    className="flex items-center gap-1"
+                    key={index}
+                    onClick={() => handleSelect(country)}
+                  >
+                    <span>{country.flag}</span>
+                    <span className="text-white text-xs">
+                      {country.name} ({country.value})
+                    </span>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <div className="flex flex-col mt-4">
             <label htmlFor="email" className="font-bold text-xs mb-1">
