@@ -1,10 +1,12 @@
 /* eslint-disable import/no-unresolved */
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Button } from "../../atoms/Button";
 
 import { EffectFlip, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+// eslint-disable-next-line import/no-named-as-default
 import Lightbox from "yet-another-react-lightbox";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 
 import "swiper/css";
 import "swiper/css/effect-flip";
@@ -14,6 +16,14 @@ import "yet-another-react-lightbox/styles.css";
 
 export const Collections = () => {
   const [index, setIndex] = useState(-1);
+  const { width } = useWindowSize();
+  const isDesktop = width >= 1024;
+  const modules = useMemo(
+    () => (isDesktop ? [Navigation] : [Navigation, EffectFlip]),
+    [isDesktop]
+  );
+
+  console.log({ modules });
 
   const slides = [
     "/images/shiny-1.webp",
@@ -41,23 +51,26 @@ export const Collections = () => {
           strikes the upper impe
         </p>
       </div>
-      <div className="mt-8">
+      <div className="mt-8 lg:max-h-[700px]">
         <Swiper
           effect={"flip"}
           grabCursor={true}
-          pagination={true}
           navigation={true}
-          modules={[EffectFlip, Navigation]}
+          spaceBetween={5}
+          modules={modules}
           className="mySwiper"
+          slidesPerView={isDesktop ? 2 : 1}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
               <button onClick={() => handleOpen(index)} className="w-full">
-                <img
-                  src={slide}
-                  className="w-full rounded-xl"
-                  alt="Collection #1"
-                />
+                <div className="bg-white p-2 lg:p-4 rounded-3xl">
+                  <img
+                    src={slide}
+                    className="w-full rounded-xl lg:max-h-[650px]"
+                    alt="Collection #1"
+                  />
+                </div>
               </button>
             </SwiperSlide>
           ))}

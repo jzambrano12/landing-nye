@@ -66,7 +66,7 @@ export const ShinyJeans = () => {
         />
       </div>
       <div className="text-center">
-        <Button size={isDesktop ? "LG" : "MD"}>Empezar ahora</Button>
+        <Button size={isDesktop ? "LG" : "MD"}>EMPEZAR AHORA</Button>
       </div>
     </section>
   );

@@ -21,7 +21,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <section className="bg-[#fff5f8] py-[30px] px-4 lg:py-24 xl:px-32">
+    <section className="flex flex-col bg-[#fff5f8] py-[30px] px-4 lg:py-24 xl:px-56">
       <Title
         firstText="Conoce nuestros"
         secondText="Shiny Jeans"
@@ -29,19 +29,20 @@ export const ContactUs = () => {
         description="When, while lovely valley teems with vapour around meand meridian sun
         strikes the upper impe"
       />
-      <div className="lg:flex lg:items-center lg:justify-center lg:gap-16 lg:mt-16">
+      <div className="lg:flex lg:items-stretch lg:justify-center lg:mt-16 lg:gap-6">
         {/* Contact us image */}
-        <div className="relative mt-8 mb-4 flex items-center justify-center lg:w-2/3 lg:mt-0 lg:mb-0">
+        <div className="relative mt-8 mb-4 flex flex-1 items-center justify-center lg:mt-0 lg:mb-0 lg:w-1/2 lg:flex-1">
           <img
             src="/images/contact-us.jpg"
             alt="Contact us"
-            className="rounded-xl"
+            className="rounded-xl max-h-[600px] w-full"
           />
           <div className="absolute bg-white/30 w-[100px] h-[100px] rounded-full flex items-center justify-center">
             <PlayIcon className="w-14 h-14 transition-all hover:w-18 hover:h-18 z-10" />
           </div>
         </div>
-        <div className="bg-white rounded-xl p-4 lg:h-auto lg:p-8">
+
+        <div className="bg-white rounded-xl p-4 xl:px-8 lg:flex lg:flex-col lg:flex-1 lg:justify-center xl:max-w-[560px]">
           <div>
             <h3 className="text-xl font-black mb-1 lg:text-3xl">
               ¡Empecemos ahora!
@@ -62,17 +63,17 @@ export const ContactUs = () => {
               <input
                 id="full-name"
                 placeholder="Camila Restrepo"
-                className="h-[35px] bg-[#f5f8fa] font-light text-[#6c6c6c] text-sm rounded-full px-4 outline-none placeholder:text-[#6c6c6c]/30 lg:text-base"
+                className="h-[35px] bg-[#f5f8fa] font-light text-[#6c6c6c] text-sm rounded-full px-4 outline-none placeholder:text-[#6c6c6c]/30 lg:text-base xl:h-[50px]"
               />
             </div>
-            <div className="relative flex flex-col my-4 lg:my-6">
+            <div className="relative flex flex-col my-4 xl:my-6">
               <label
                 htmlFor="email"
                 className="font-bold text-xs mb-1 lg:text-base"
               >
                 Teléfono
               </label>
-              <div className="flex items-center relative w-full h-[35px] bg-[#f5f8fa] rounded-full px-4">
+              <div className="flex items-center relative w-full h-[35px] bg-[#f5f8fa] rounded-full px-4 xl:h-[50px]">
                 <button
                   type="button"
                   onClick={handleShowList}
@@ -122,11 +123,11 @@ export const ContactUs = () => {
                 id="email"
                 type="email"
                 placeholder="crestrepo@nyejeans.com"
-                className="h-[35px] bg-[#f5f8fa] font-light text-[#6c6c6c] text-sm rounded-full px-4 outline-none placeholder:text-[#6c6c6c]/30 lg:text-base"
+                className="h-[35px] bg-[#f5f8fa] font-light text-[#6c6c6c] text-sm rounded-full px-4 outline-none placeholder:text-[#6c6c6c]/30 lg:text-base xl:h-[50px]"
               />
             </div>
-            <button className="w-full h-[45px] text-lg text-white bg-pink rounded-full mt-4 lg:mt-8">
-              Registrarme
+            <button className="w-full h-[45px] text-lg text-white bg-pink rounded-full mt-4 lg:mt-8 xl:h-[70px] xl:text-xl xl:tracking-wide">
+              REGISTRARME
             </button>
           </form>
         </div>

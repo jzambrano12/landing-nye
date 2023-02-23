@@ -20,7 +20,7 @@ export const Hero = () => {
           </p>
         </div>
         <div className="flex items-center justify-between mt-6 md:justify-start md:gap-4">
-          <Button size="MD">Empezar Ahora</Button>
+          <Button size="MD">EMPEZAR AHORA</Button>
           <div className="flex items-center justify-center relative p-4">
             <div className="absolute w-[50px] h-[50px] bg-white rounded-full animate-ping" />
             <div className="z-10 flex items-center justify-center w-[50px] h-[50px] bg-[#5f28d3] rounded-full">
