@@ -1,12 +1,13 @@
 /* eslint-disable import/no-unresolved */
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "../../atoms/Button";
 
-import { EffectFlip, Navigation } from "swiper";
+import { EffectCreative, EffectFlip, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 // eslint-disable-next-line import/no-named-as-default
 import Lightbox from "yet-another-react-lightbox";
 import { useWindowSize } from "../../../hooks/useWindowSize";
+import { Title } from "../../atoms/Title";
 
 import "swiper/css";
 import "swiper/css/effect-flip";
@@ -15,15 +16,20 @@ import "swiper/css/pagination";
 import "yet-another-react-lightbox/styles.css";
 
 export const Collections = () => {
+  const [isDesktop, setIsDesktop] = useState(null);
   const [index, setIndex] = useState(-1);
   const { width } = useWindowSize();
-  const isDesktop = width >= 1024;
+  const slidesPerView = useMemo(() => (isDesktop ? 2 : 1), [isDesktop, width]);
   const modules = useMemo(
-    () => (isDesktop ? [Navigation] : [Navigation, EffectFlip]),
-    [isDesktop]
+    () => (isDesktop ? [Navigation, EffectCreative] : [Navigation, EffectFlip]),
+    [isDesktop, width]
   );
 
-  console.log({ modules });
+  useEffect(() => {
+    if (width) {
+      setIsDesktop(() => width >= 1024);
+    }
+  }, [width]);
 
   const slides = [
     "/images/shiny-1.webp",
@@ -39,27 +45,30 @@ export const Collections = () => {
     setIndex(incomingIndex);
   };
 
+  if (isDesktop === null) {
+    return <span>Loading...</span>;
+  }
+
   return (
-    <section className="bg-lila py-[30px] px-4 xl:px-32">
-      <div>
-        <h2 className="text-[35px] font-black leading-[40px] text-center">
-          Conoce nuestros <br />{" "}
-          <span className="text-[#fd346e]">Shiny Jeans</span>
-        </h2>
-        <p className="text-[#70798b] text-sm text-center mt-2">
-          When, while lovely valley teems with vapour around meand meridian sun
-          strikes the upper impe
-        </p>
-      </div>
-      <div className="mt-8 lg:max-h-[700px]">
+    <section className="bg-lila py-[30px] px-4 lg:py-24 xl:px-56">
+      <Title
+        firstText="Conoce nuestros"
+        secondText="Shiny Jeans"
+        secondTextColor="text-[#fd346e]"
+        description="When, while lovely valley teems with vapour around meand meridian sun
+        strikes the upper impe"
+      />
+      <div className="mt-8 lg:max-h-[700px] lg:relative lg:flex lg:items-center lg:justify-center">
         <Swiper
           effect={"flip"}
           grabCursor={true}
           navigation={true}
-          spaceBetween={5}
+          creativeEffect={isDesktop}
+          flipEffect={!isDesktop}
+          spaceBetween={isDesktop && 5}
           modules={modules}
-          className="mySwiper"
-          slidesPerView={isDesktop ? 2 : 1}
+          slidesPerView={slidesPerView}
+          slidesPerGroup={2}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -81,6 +90,18 @@ export const Collections = () => {
           close={() => setIndex(-1)}
           slides={slides}
         />
+        <div className="hidden lg:block lg:absolute lg:w-full lg:h-full">
+          <div className="absolute -left-8 top-0">
+            <div className="absolute top-0 left-0 text-5xl">🤩</div>
+            <div className="absolute -left-8 top-28 text-5xl">⚡️</div>
+            <div className="absolute -left-16 top-60 text-5xl">❤️</div>
+          </div>
+          <div className="absolute -right-8 top-0">
+            <div className="absolute top-0 -left-16 text-5xl z-20">🤩</div>
+            <div className="absolute -left-8 top-28 text-5xl">⚡️</div>
+            <div className="absolute left-4 top-60 text-5xl">❤️</div>
+          </div>
+        </div>
       </div>
       <div className="text-center mt-6">
         <Button size="MD">Empezar Ahora</Button>

@@ -25,7 +25,7 @@ export const ContactUs = () => {
       <Title
         firstText="Conoce nuestros"
         secondText="Shiny Jeans"
-        secondTextColor="#000"
+        secondTextColor="text-[#000]"
         description="When, while lovely valley teems with vapour around meand meridian sun
         strikes the upper impe"
       />

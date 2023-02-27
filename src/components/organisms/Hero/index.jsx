@@ -4,7 +4,7 @@ import { SocialIconsFloating } from "../../molecules/SocialIconsFloating";
 
 export const Hero = () => {
   return (
-    <section className="w-screen min-h-screen bg-[#f3effe] pt-24 pb-10 px-4 md:flex md:items-center  xl:px-32">
+    <section className="w-screen min-h-screen bg-[#f3effe] pt-24 pb-10 px-4 md:flex md:items-center lg:py-24 xl:px-56">
       <div className="md:flex md:flex-col md:flex-1">
         <div>
           <h1 className="font-black text-[35px] leading-[42px] text-center md:text-left md:text-5xl md:leading-[50px] lg:text-6xl lg:leading-[70px]">

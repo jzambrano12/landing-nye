@@ -16,7 +16,7 @@ export const Accordion = ({
     <div className="w-full">
       <button
         onClick={handleOpen}
-        className="flex  items-center justify-between w-full py-2 px-4 bg-[#f6f6f6] rounded-lg"
+        className="flex  items-center justify-between w-full p-4 bg-[#f6f6f6] rounded-lg "
       >
         <span className="font-bold">{title}</span>
         <div className="relative">

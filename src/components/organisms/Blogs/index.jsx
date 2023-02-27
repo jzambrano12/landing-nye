@@ -1,19 +1,17 @@
 import { Button } from "../../atoms/Button";
+import { Title } from "../../atoms/Title";
 
 export const Blogs = () => {
   return (
-    <section className="py-[30px] px-4 bg-[#f5f5f5]  xl:px-32">
-      <div>
-        <h2 className="text-[35px] font-black leading-[40px] text-center">
-          Conoce nuestros <br />{" "}
-          <span className="text-[#fd346e]">Shiny Jeans</span>
-        </h2>
-        <p className="text-[#70798b] text-sm text-center mt-2">
-          When, while lovely valley teems with vapour around meand meridian sun
-          strikes the upper impe
-        </p>
-      </div>
-      <div className="flex flex-col mt-8 gap-6">
+    <section className="py-[30px] px-4 bg-[#f5f5f5] lg:py-24 xl:px-56">
+      <Title
+        firstText="Conoce nuestros"
+        secondText="Shiny Jeans"
+        secondTextColor="text-[#fd346e]"
+        description="When, while lovely valley teems with vapour around meand meridian sun
+        strikes the upper impe"
+      />
+      <div className="flex flex-col mt-8 gap-6 lg:mt-14 lg:flex-row">
         <div>
           <div
             className="relative w-full h-[190px] rounded-t-xl"

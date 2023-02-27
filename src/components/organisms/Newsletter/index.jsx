@@ -1,6 +1,6 @@
 export const NewsLetter = () => {
   return (
-    <section className="py-[30px] px-4 bg-pink  xl:px-32">
+    <section className="py-[30px] px-4 bg-pink lg:py-24 xl:px-56">
       <div>
         <h2 className="text-[35px] text-white font-black leading-[40px] text-center">
           Unete a nuestra <br /> Comunidad
